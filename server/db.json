@@ -1,0 +1,148 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fullName": "Nguyen Van A",
+            "email": "a@gmail.com",
+            "phone": "0123456789",
+            "password": "hashed_password",
+            "avatar": "/images/avatar/a.jpg",
+            "gender": "male",
+            "birthday": "2006-11-01",
+            "role": "user",
+            "createdAt": "2025-01-01T10:20:00",
+            "_note": "Thể loại phim ủa thích của người dùng",
+            "favorites": [
+                1,
+                3,
+                5
+            ]
+        }
+    ],
+    "genres": [
+        {
+            "id": 1,
+            "name": "Hành động"
+        },
+        {
+            "id": 2,
+            "name": "Hoạt hình"
+        }
+    ],
+    "movies": [
+        {
+            "id": 10,
+            "title": "Avengers: Endgame",
+            "poster": "/posters/endgame.jpg",
+            "trailer": "https://youtube.com/...",
+            "description": "Trận chiến cuối cùng với Thanos...",
+            "duration": 180,
+            "releaseDate": "2025-02-20",
+            "status": "now_showing",
+            "_note": "coming_soon – Sắp chiếu,now_showing – Đang chiếu,finished – Ngừng chiếu",
+            "genres": [
+                1,
+                3
+            ],
+            "director": "Anthony Russo",
+            "actors": [
+                "Chris Evans",
+                "Robert Downey Jr"
+            ]
+        }
+    ],
+    "theaters": [
+        {
+            "id": 1,
+            "name": "CGV Vincom Nguyễn Chí Thanh",
+            "address": "54 Nguyễn Chí Thanh, Hà Nội",
+            "hotline": "19001000",
+            "website": "https://cgv.vn",
+            "screens": [
+                1,
+                2,
+                3
+            ]
+        }
+    ],
+    "screens": [
+        {
+            "id": 1,
+            "theaterId": 1,
+            "name": "Phòng 1 - 2D",
+            "type": "2D",
+            "seatMap": [
+                101,
+                102,
+                103,
+                104
+            ]
+        }
+    ],
+    "seats": [
+        {
+            "id": 101,
+            "screenId": 1,
+            "row": "A",
+            "number": 1,
+            "type": "normal",
+            "_note": "type bao gồm thêm vip , sweetbox",
+            "price": 90000
+        }
+    ],
+    "showtimes": [
+        {
+            "id": 500,
+            "movieId": 10,
+            "theaterId": 1,
+            "screenId": 1,
+            "date": "2025-03-01",
+            "startTime": "19:30",
+            "endTime": "22:00",
+            "format": "2D",
+            "price": 100000,
+            "reservedSeats": [
+                101,
+                105
+            ]
+        }
+    ],
+    "bookings": [
+        {
+            "id": 900,
+            "userId": 2,
+            "showtimeId": 500,
+            "seats": [
+                101,
+                102
+            ],
+            "totalPrice": 200000,
+            "status": "pending",
+            "createdAt": "2025-03-01T17:00:00"
+        }
+    ],
+    "transactions": [
+        {
+            "id": 2000,
+            "bookingId": 900,
+            "method": "vnpay",
+            "amount": 200000,
+            "status": "success",
+            "transactionCode": "VNP123456",
+            "createdAt": "2025-03-01T17:05:00"
+        }
+    ],
+    "news": [
+        {
+            "id": 1,
+            "title": "CGV giảm giá 50% ngày lễ tình nhân!",
+            "thumbnail": "/news/valentine.jpg",
+            "content": "Nội dung khuyến mãi...",
+            "createdAt": "2025-02-01",
+            "tags": [
+                "khuyen_mai",
+                "su_kien"
+            ]
+        }
+    ]
+}
